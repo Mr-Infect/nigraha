@@ -2,7 +2,7 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Shield-Defense.svg/200px-Shield-Defense.svg.png" width="80" alt="Shield"/>
   <h1>N I G R A H A</h1>
   <p><b>GLOBAL INTELLIGENCE & TACTICAL C2 SYSTEM</b></p>
-  <p><code>UNCLASSIFIED // FOR ANALYTICAL USE ONLY // OSINT</code></p>
+  <p><code>CLASSIFIED // FOR ANALYTICAL USE ONLY // OSINT</code></p>
 </div>
 
 ---
