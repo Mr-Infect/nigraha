@@ -1,0 +1,40 @@
+# NIGRAHA Global Gitignore
+
+# Node & Frontend
+node_modules/
+dist/
+build/
+.npm/
+.yarn/
+*.log
+
+# Python & Backend
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+celerybeat-schedule
+*.pid
+
+# IDEs & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Secrets & Environment Variables
+.env
+.env.*
+!.env.example
+secret_keys.txt
+api_keys.txt
+
+# Temp / specific files mentioned by user
+gemini-code-1783708875947.md
+gemini-code-1783708875947.md:Zone.Identifier

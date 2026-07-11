@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    @apply bg-[#0A0E17] text-slate-300 overflow-hidden m-0 p-0;
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  }
+}
+
+/* ─── MapLibre Control Overrides ─── */
+.maplibregl-ctrl-bottom-right,
+.maplibregl-ctrl-bottom-left {
+  display: none !important;
+}
+
+.maplibregl-ctrl-top-left {
+  top: 8px !important;
+  left: 8px !important;
+}
+
+.maplibregl-ctrl-group {
+  background: rgba(10,14,23,0.92) !important;
+  border: 1px solid rgba(0,240,255,0.2) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.6) !important;
+}
+
+.maplibregl-ctrl-group button {
+  color: #00F0FF !important;
+  background: transparent !important;
+  font-family: ui-monospace, monospace !important;
+}
+
+.maplibregl-ctrl-group button:hover {
+  background: rgba(0,240,255,0.08) !important;
+}
+
+/* ─── STANREP Tactical Popup ─── */
+.maplibregl-popup-content {
+  background: rgba(8, 11, 20, 0.98) !important;
+  border: 1px solid rgba(0, 240, 255, 0.25) !important;
+  border-top: 2px solid rgba(0, 240, 255, 0.6) !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: #94a3b8 !important;
+  font-family: ui-monospace, monospace !important;
+  font-size: 10px !important;
+  box-shadow: 0 0 30px rgba(0,0,0,0.9), 0 0 15px rgba(0,240,255,0.08) !important;
+  min-width: 220px !important;
+  max-width: 300px !important;
+}
+
+.maplibregl-popup-tip {
+  border-top-color: rgba(0,240,255,0.25) !important;
+  border-bottom-color: rgba(0,240,255,0.25) !important;
+}
+
+.maplibregl-popup-close-button {
+  color: rgba(0,240,255,0.5) !important;
+  font-size: 14px !important;
+  right: 6px !important;
+  top: 4px !important;
+  width: 18px !important;
+  height: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.maplibregl-popup-close-button:hover {
+  color: #00F0FF !important;
+  background: rgba(0,240,255,0.1) !important;
+}
+
+/* ─── STANREP Card Styles ─── */
+.stanrep-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.sr-header {
+  padding: 7px 10px 5px;
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sr-grid {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1px 0;
+  padding: 6px 0 6px;
+}
+
+.sr-row {
+  display: contents;
+}
+
+.sr-label {
+  padding: 2px 10px;
+  color: #475569;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sr-val {
+  padding: 2px 10px 2px 0;
+  color: #CBD5E1;
+  font-size: 10px;
+  word-break: break-word;
+}
+
+/* ─── Classification Banner ─── */
+.classification-banner {
+  width: 100%;
+  text-align: center;
+  font-family: ui-monospace, monospace;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  padding: 2px 0;
+  background: rgba(0, 240, 255, 0.06);
+  border-top: 1px solid rgba(0,240,255,0.15);
+  border-bottom: 1px solid rgba(0,240,255,0.15);
+  color: rgba(0, 240, 255, 0.5);
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar { width: 2px; height: 2px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,240,255,0.15); border-radius: 1px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,240,255,0.4); }
+
+/* ─── Alert Ticker ─── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  display: inline-flex;
+}
+
+/* ─── Scan Line ─── */
+@keyframes scanline {
+  0%   { transform: translateY(-100vh); opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { transform: translateY(200vh); opacity: 0; }
+}
+
+.animate-scanline {
+  animation: scanline 14s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ─── Cyber Mode Overrides ─── */
+.cyber-mode-active .maplibregl-ctrl-group {
+  border-color: rgba(148,0,211,0.3) !important;
+}
+
+.cyber-mode-active .maplibregl-ctrl-group button {
+  color: #a855f7 !important;
+}
+
+.cyber-mode-active .maplibregl-popup-content {
+  border-color: rgba(148,0,211,0.35) !important;
+  border-top-color: rgba(148,0,211,0.7) !important;
+  box-shadow: 0 0 30px rgba(0,0,0,0.9), 0 0 20px rgba(148,0,211,0.12) !important;
+}
+
+/* ─── C2 Header Pulse Badge ─── */
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.9; }
+  50%  { transform: scale(1.6); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+/* ─── MILSYMBOL popup icon alignment ─── */
+.maplibregl-marker { cursor: crosshair !important; }
