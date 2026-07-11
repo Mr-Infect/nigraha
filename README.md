@@ -31,8 +31,6 @@ The interface natively ingests and maps real-time telemetry metrics using a 60 F
   ```json
   { "CallSign": "AIC101", "ICAOHex": "34190667", "Squawk": "7700", "Altitude": "36000ft", "Heading": "30°", "Status": "EMERGENCY" }
 
-```
-
 ### 🚢 MARITIME DOMAIN (Naval Tracking)
 
 * **Decentralized AIS Data Stream:** Maps global shipping arrays and military auxiliaries down to precise hull vectors.
@@ -56,7 +54,6 @@ Subnet: "164.100.47.0/24"
 Attack_State: "DDOS MITIGATION IN PROGRESS"
 Severity: "ELEVATED THREAT"
 
-```
 
 
 
